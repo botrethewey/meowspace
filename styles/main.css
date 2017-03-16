@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Permanent+Marker');
 
 #camelcase {
   text-transform: uppercase;
@@ -43,31 +43,61 @@ main {
 }
 
 main section:first-of-type {
-  height: 250px;
+  height: 400px;
   background-image: url("../assets/hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
 }
 
 main section h1 {
-  padding-top: 90px;
-  font-size: 3.0em;
+  padding-top: 160px;
+  font-size: 4.0em;
   color: black;
   font-family: 'Permanent Marker'
 }
 
 main section:nth-of-type(2) h2 {
+  margin-bottom: 15px;
   text-align: center;
   font-size: 2.0em;
+  font-family: 'Bangers', cursive;
+
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
 }
 main section:nth-of-type(2) {
-  display: inline-block;
+  display: inline;
 }
 
 main section:nth-of-type(3) {
-    background-color: pink;
+  background-color: black;
+  width: 100%;
+}
+
+main section:nth-of-type(3) img{
+  width: 400px;
+  height: auto;
+}
+
+#join {
+  width: 300px;
+  display: inline-block;
+  text-align: center;
 }
 
 main section:last-of-type {
@@ -76,11 +106,52 @@ main section:last-of-type {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
 }
 
 main section:last-of-type h2 {
   padding-top: 90px;
   font-size: 3.0em;
   color: white;
+  text-align: center;
+}
+
+.post {
+  width: 200px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 6%;
+  padding: 1%;
+  margin: 1.0em;
+}
+
+.post p {
+  font-size: 0.8em;
+  margin: 15px;
+}
+
+.title h3 {
+  font-size: 1em;
+}
+
+h1 {
+  color: lightsalmon;
+  opacity: 1;
+  animation: fade 10s linear;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.post p:last-of-type {
+  border-radius: 25px;
+  border: 1px solid darkseagreen;
+  padding-bottom: 10px;
+  width: 90px;
+  height: 7px;
+}
+.post p a {
+  text-decoration: none;
+  color: darkseagreen;
 }
