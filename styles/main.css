@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers|Permanent+Marker');
 
+body {
+  width: 90%;
+  padding-left: 5%
+}
+
 #camelcase {
   text-transform: uppercase;
 }
 
 header {
   position:fixed;
-  width: 100%;
+  width: 90%;
   top: 0px;
   background-color: black;
   display: inline-block;
 }
 
-header a {
+a {
   text-decoration: none;
   color: white;
 }
 
-header a:hover {
-  color: blue;
+a:hover {
+  color: tomato;
 }
 
 header h2 {
@@ -43,7 +48,7 @@ main {
 }
 
 main section:first-of-type {
-  height: 400px;
+  height: 500px;
   background-image: url("../assets/hero.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -53,90 +58,15 @@ main section:first-of-type {
 }
 
 main section h1 {
-  padding-top: 160px;
-  font-size: 4.0em;
-  color: black;
+  padding-top: 180px;
+  font-size: 6.0em;
+  color: white;
   font-family: 'Permanent Marker'
 }
 
-main section:nth-of-type(2) h2 {
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 2.0em;
-  font-family: 'Bangers', cursive;
-
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-
-}
-main section:nth-of-type(2) {
-  display: inline;
-}
-
-main section:nth-of-type(3) {
-  background-color: black;
-  width: 100%;
-}
-
-main section:nth-of-type(3) img{
-  width: 400px;
-  height: auto;
-}
-
-#join {
-  width: 300px;
-  display: inline-block;
-  text-align: center;
-}
-
-main section:last-of-type {
-  height: 300px;
-  background-image: url("../assets/everybody.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-main section:last-of-type h2 {
-  padding-top: 90px;
-  font-size: 3.0em;
-  color: white;
-  text-align: center;
-}
-
-.post {
-  width: 200px;
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 6%;
-  padding: 1%;
-  margin: 1.0em;
-}
-
-.post p {
-  font-size: 0.8em;
-  margin: 15px;
-}
-
-.title h3 {
-  font-size: 1em;
-}
-
 h1 {
-  color: lightsalmon;
   opacity: 1;
-  animation: fade 10s linear;
+  animation: fade 4s linear;
 }
 
 @keyframes fade {
@@ -144,14 +74,105 @@ h1 {
   100% { opacity: 1 }
 }
 
+main section:nth-of-type(2) h2 {
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 3.0em;
+  font-family: 'Bangers', cursive;
+}
+
+#postbundle {
+  max-width: 900px;
+}
+
+.post {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 6%;
+  padding: 0px 0px 15px 0px;
+  margin: 1.0em;
+  text-align: center;
+  vertical-align: top;
+}
+
+.post p {
+  font-size: 0.8em;
+  margin: 15px;
+}
+
+.title {
+  border-bottom: 1px solid black;
+}
+
+.title h3 {
+  font-size: 1em;
+  padding: 0px 5px;
+}
+
 .post p:last-of-type {
   border-radius: 25px;
-  border: 1px solid darkseagreen;
-  padding-bottom: 10px;
-  width: 90px;
-  height: 7px;
+  border: 1px solid tomato;
+  padding: 3px 20px;
+  text-align: center;
+  display: inline;
+  width: 200%;
 }
+
 .post p a {
   text-decoration: none;
-  color: darkseagreen;
+  color: tomato;
+}
+
+.post p a:hover{
+  font-weight: bold;
+}
+
+main section:last-of-type {
+  height: 400px;
+  background-image: url("../assets/everybody.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+main section:last-of-type h2 {
+  padding-top: 150px;
+  font-size: 3.0em;
+  font-family: 'Permanent Marker';
+  color: white;
+  text-align: center;
+  margin: 0px;
+  /*max-width: 400px;
+  padding: 10%;*/
+}
+
+footer span h4 {
+  float: left;
+  clear: both;
+  margin: 0px;
+}
+
+footer span h4:after {
+  content: "\00a0";
+}
+
+ul li a {
+  color: black;
+}
+
+footer span {
+  display: inline-block;;
+}
+
+footer span nav {
+  font-weight: bold;
+}
+
+#disclaimer {
+  max-width: 400px;
+  text-align: justify;
 }
