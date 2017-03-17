@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers|Permanent+Marker');
 
-body {
-  width: 90%;
-  padding-left: 5%
-}
-
 #camelcase {
   text-transform: uppercase;
 }
 
 header {
   position:fixed;
-  width: 90%;
+  width: 100%;
   top: 0px;
   background-color: black;
   display: inline-block;
@@ -81,10 +76,11 @@ main section:nth-of-type(2) h2 {
   text-align: center;
   font-size: 3.0em;
   font-family: 'Bangers', cursive;
+  position: relative;
 }
 
-#postbundle {
-  max-width: 900px;
+.postbundle {
+  text-align: center;
 }
 
 .post {
@@ -131,6 +127,45 @@ main section:nth-of-type(2) h2 {
   font-weight: bold;
 }
 
+main section:nth-child(3) {
+  margin-top: 10px;
+  background-color: tomato;
+  text-align: center;
+  height: 290px;
+  color: white;
+
+}
+
+#join{
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+}
+
+#join h2 {
+  margin-bottom: 0px;
+  float: left;
+  clear: both;
+}
+
+#join h2::after {
+  content: "!"
+}
+
+#join p {
+  font-size: 1.0rem;
+  text-align: justify;
+  max-width: 270px;
+}
+
+#join + img {
+  display: inline-block;
+  padding-top: 35px;
+  width: 330px;
+  height: auto;
+}
+
 main section:last-of-type {
   height: 400px;
   background-image: url("../assets/everybody.jpg");
@@ -141,38 +176,52 @@ main section:last-of-type {
 
 main section:last-of-type h2 {
   padding-top: 150px;
-  font-size: 3.0em;
+  padding-left: 24%;
+  font-size: 3.5em;
   font-family: 'Permanent Marker';
   color: white;
-  text-align: center;
   margin: 0px;
-  /*max-width: 400px;
-  padding: 10%;*/
+  max-width: 500px;
+  text-align: center;
 }
 
-footer span h4 {
+footer {
+  background-color: dimgray;
+  padding-left: 15%;
+  display: flex;
+}
+
+footer div:first-of-type {
+  display: inline;
+  margin: 0px;
+}
+
+footer div h4 {
+  font-size: 9px;
   float: left;
   clear: both;
-  margin: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
-footer span h4:after {
+footer div h4:after {
   content: "\00a0";
 }
 
-ul li a {
+footer a {
   color: black;
 }
 
-footer span {
-  display: inline-block;;
-}
-
-footer span nav {
+footer div nav {
   font-weight: bold;
+  text-align: left;
+  padding-right: 10%;
 }
 
 #disclaimer {
-  max-width: 400px;
+  line-height: 1.5;
+  font-size: 9px;
+  margin-right: 50px;
+  max-width: 330px;
   text-align: justify;
 }
